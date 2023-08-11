@@ -4,10 +4,12 @@ const app = express();
 
 app.use(cors());
 
-app.use('/login', (req, res) => {
-  res.send({
-    token: 'sample token'
-  });
+app.post('/login', (req, res) => {
+  res.send("logging in");
 });
 
-app.listen(3001, () => console.log('App is running on http://localhost:3001/login'));
+app.post('/register', (req, res) => {
+  res.send("registering");
+});
+
+app.listen(3001, () => console.log('App is running on http://localhost:3001'));
